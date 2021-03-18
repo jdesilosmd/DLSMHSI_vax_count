@@ -20,12 +20,12 @@ st.sidebar.markdown('#### DOH Data Drop dataset can also be accessed [here](http
 upload_file = st.file_uploader('Upload data here: ',
                                type=['xlsx', 'xls'])
 
-if case_upload is None:
+if upload_file is None:
   st.write('Please upload a dataset.')
 
-elif case_upload is not None:
+elif upload_file is not None:
   
-  case_upload.seek(0)
+  upload_file.seek(0)
   
   df = pd.read_excel(upload_file)
   df['STATUS'] = df['STATUS'].fillna(2)
