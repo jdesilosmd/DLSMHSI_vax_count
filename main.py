@@ -23,7 +23,7 @@ upload_file = st.file_uploader('Upload data here: ',
 if case_upload is None:
   st.write('Please upload a dataset.')
 
-  elif case_upload is not None:
+elif case_upload is not None:
   
   case_upload.seek(0)
   
